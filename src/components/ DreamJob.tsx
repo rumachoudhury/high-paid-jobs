@@ -37,7 +37,7 @@ export default function DreamJob() {
   };
 
   return (
-    <section className="py-12 px-4 md:px-12 lg:px-20 bg-gray-50 mx-auto">
+    <section className="py-12 px-4 md:px-12 lg:px-20 bg-gray-50 mx-auto dark:bg-[#212121]">
       <h2 className="text-5xl font-bold text-center mb-2">
         Choose Your Path to Land Your Dream Job
       </h2>
@@ -47,7 +47,7 @@ export default function DreamJob() {
         <br /> potential
       </p>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 max-w-5xl items-start ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 max-w-5xl items-start  ">
         {/* Left Cards */}
         <div className="space-y-6 w-full">
           {/* Job Assessment */}
@@ -55,7 +55,7 @@ export default function DreamJob() {
             onMouseEnter={() => setHoveredCard("assessment")}
             onMouseLeave={() => setHoveredCard("")}
             onClick={() => setSelected("assessment")}
-            className={`cursor-pointer flex items-start gap-4 p-4 rounded-2xl shadow-sm bg-white transition-all duration-300 hover:shadow-lg hover:scale-105 ${
+            className={`cursor-pointer flex items-start gap-4 p-4 rounded-2xl shadow-sm bg-white dark:bg-[#303030] transition-all duration-300 hover:shadow-lg hover:scale-105 ${
               selected === "assessment" || hoveredCard === "assessment"
                 ? "border-2 border-blue-300"
                 : ""
@@ -82,7 +82,7 @@ export default function DreamJob() {
             onMouseEnter={() => setHoveredCard("placement")}
             onMouseLeave={() => setHoveredCard("")}
             onClick={() => setSelected("placement")}
-            className={`cursor-pointer flex items-start gap-4 p-4 rounded-2xl shadow-sm bg-white transition-all duration-300 hover:shadow-lg hover:scale-105 ${
+            className={`cursor-pointer flex items-start gap-4 p-4 rounded-2xl shadow-sm bg-white dark:bg-[#303030] transition-all duration-300 hover:shadow-lg hover:scale-105 ${
               selected === "placement" || hoveredCard === "placement"
                 ? "border-2 border-blue-500"
                 : ""
@@ -109,7 +109,7 @@ export default function DreamJob() {
             onMouseEnter={() => setHoveredCard("prep")}
             onMouseLeave={() => setHoveredCard("")}
             onClick={() => setSelected("prep")}
-            className={`cursor-pointer flex items-start gap-4 p-4 rounded-2xl shadow-sm bg-white transition-all duration-300 hover:shadow-lg hover:scale-105 ${
+            className={`cursor-pointer flex items-start gap-4 p-4 rounded-2xl shadow-sm bg-white dark:bg-[#303030] transition-all duration-300 hover:shadow-lg hover:scale-105 ${
               selected === "prep" || hoveredCard === "prep"
                 ? "border-2 border-blue-500"
                 : ""
@@ -133,7 +133,7 @@ export default function DreamJob() {
         </div>
 
         {/* Right Content */}
-        <div className="bg-white p-8 rounded-2xl shadow-md space-y-2 mx-auto w-[800px] border border-gray-500 min-h-[250px] transition-all duration-300 max-w-[750px]">
+        <div className="bg-white dark:bg-[#303031] p-8 rounded-2xl shadow-md space-y-2 mx-auto w-[800px] border border-gray-500 dark:border-gray-300 min-h-[250px] transition-all duration-300 max-w-[750px]">
           <h3 className="text-xl font-semibold mb-4 capitalize">
             {hoveredCard || selected
               ? hoveredCard === "assessment" || selected === "assessment"
@@ -147,22 +147,11 @@ export default function DreamJob() {
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
             {getContent().map((item, idx) => (
               <li key={idx} className="flex items-start gap-2">
-                <Check className="text-blue-500 w-5 h-5 mt-1" />
+                <Check className="text-blue-500 dark:text-blue-900 w-5 h-5 mt-1" />
                 {item}
               </li>
             ))}
           </ul>
-
-          {/* <div className="flex items-center justify-center ">
-            <button className="flex items-center justify-center space-x-2 text-white p-2 px-4 bg-[#0836CF] rounded-lg hover:bg-[#062abf] transition  mt-4">
-              <span>
-                {hoveredCard === "prep" || selected === "prep"
-                  ? "Schedule Consultation"
-                  : "Get Started"}
-              </span>
-              <span className="text-lg text-white">{">"}</span>
-            </button>
-          </div> */}
 
           <div className="flex items-center justify-center">
             <button className="flex items-center justify-center space-x-2 text-white p-2 px-4 bg-[#0836CF] rounded-lg hover:bg-[#062abf] transition mt-4">

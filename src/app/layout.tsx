@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 // import { ThemeProvider } from "next-themes";
 import { ThemeProvider } from "@/components/ThemeProvider";
-// import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,16 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      {/* <Head>
-        <link
-          rel="icon"
-          href="/office-icon.jpeg"
-          // sizes="256x256"
-          type="image/jpeg"
-          className="w-100 h-100 rounded-full"
-        />
-      </Head> */}
+    <html lang="en" className="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

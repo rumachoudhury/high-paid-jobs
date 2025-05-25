@@ -14,6 +14,13 @@ import {
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   const renderIcon = () => {
     if (theme === "light") return <Sun className="h-5 w-5" />;

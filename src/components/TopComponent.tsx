@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function TopComponent() {
   return (
-    <div className="w-full bg-[#0836CF] text-gray-200">
+    <div className="w-full bg-[#0836CF] dark:bg-[#052466] text-gray-200 dark:text-gray-300">
       {/* Top bar */}
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 border-b-2 border-gray-500">
         {/* Left side: Logo */}
@@ -30,7 +30,7 @@ export default function TopComponent() {
             className="bg-white text-md text-gray-600 hover:bg-gray-100 flex items-center space-x-2 rounded-full p-1 px-4"
           >
             <span className="">Get Started</span>
-            {/* <span className="text-md text-gray-700">{">"}</span> */}
+
             <ChevronRight className="w-5 h-5 " />
           </Button>
         </div>
@@ -47,14 +47,36 @@ export default function TopComponent() {
             🔥 99.99% GUARANTEED to Reach the Top 1%
           </h2>
 
-          <h1 className="text-5xl font-bold text-white dark:text-gray-300 leading-relaxed">
+          {/* <h1 className="text-5xl font-bold text-white dark:text-gray-300 leading-relaxed">
             Get your Six-Figure job back in{" "}
             <span className="relative inline-block text-[#E8B006] font-semibold">
               8-16 Weeks
               <span className="absolute left-0 bottom-0 w-full h-[4px] bg-[#E8B006] rounded-b-full"></span>
             </span>
             with our proven techniques.
+          </h1> */}
+          <h1 className="text-5xl font-bold text-white dark:text-gray-300 leading-relaxed">
+            Get your Six-Figure job back in{" "}
+            <span className="relative inline-block text-[#E8B006] font-bold">
+              8-16 Weeks
+              <svg
+                className="absolute left-0 w-full bottom-0"
+                height="10"
+                viewBox="0 0 100 10"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0 5 Q50 0, 100 5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                  className="text-[#E8B006]"
+                />
+              </svg>
+            </span>
+            with our proven techniques.
           </h1>
+
           <p className="text-sm text-gray-300">
             Get access actively hiring 20+ premium recruiters today surrounding
             your location.
@@ -66,26 +88,30 @@ export default function TopComponent() {
               className="bg-[#E8B006] rounded-full text-gray-700 px-10 py-3"
             >
               <span>Book Free Consultation</span>
-              <span className="text-md text-gray-700">{">"}</span>
+
+              <ChevronRight className="w-5 h-5 " />
             </Button>
             <Button
               onClick={() => alert("Join Next Webinar clicked!")}
               className="bg-[#1840D2] text-white hover:bg-blue-700 rounded-full px-8 py-3 "
             >
               <span>Join Next Webinar</span>
-              <span className="text-md text-white">{">"}</span>
+
+              <ChevronRight className="w-5 h-5 " />
             </Button>
           </div>
         </div>
 
         {/* Right side: Vimeo video */}
-        <div className="flex-1 w-full aspect-video rounded-lg overflow-hidden ">
+        <div className="flex-1 w-full aspect-video rounded-lg overflow-hidden">
           <iframe
-            src="https://player.vimeo.com/video/1065695538?h=2a872c4ae3"
+            // src="https://player.vimeo.com/video/1065695538?h=2a872c4ae3"
+            src="https://player.vimeo.com/video/1065695538?h=2a872c4ae3&transparent=1&background=0"
             title="Promotional Video"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
             className="w-full h-full"
+            style={{ backgroundColor: "transparent" }}
           />
         </div>
       </section>

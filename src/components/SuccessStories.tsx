@@ -191,7 +191,7 @@ export default function SuccessStories() {
         </div>
       )}
       {/* Button */}
-      <Button className=" flex text-center items-center justify-center space-x-2  p-2 px-6 bg-[#FACC14] rounded-full  transition mt-10 mx-auto">
+      <Button className=" flex text-center items-center justify-center space-x-2  p-2 px-6 bg-[#FACC14] rounded-full  transition mt-10 text-black   mx-auto">
         Book Free Consultation
       </Button>
     </section>
