@@ -30,11 +30,21 @@ export function ThemeToggle() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+      {/* <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon">
           {renderIcon()}
         </Button>
+      </DropdownMenuTrigger> */}
+      <DropdownMenuTrigger asChild>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="hover:bg-blue-700 dark:hover:bg-blue-900 rounded-full transition-colors duration-200"
+        >
+          {renderIcon()}
+        </Button>
       </DropdownMenuTrigger>
+
       <DropdownMenuContent align="end" className="bg-[#F8F8F8] text-gray-900">
         <DropdownMenuItem onClick={() => setTheme("light")}>
           <Sun className="mr-2 h-4 w-4" />
