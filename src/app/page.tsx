@@ -4,6 +4,8 @@ import SuccessStories from "@/components/SuccessStories";
 import TopComponent from "@/components/TopComponent";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import WhyHighPaidJobs from "@/components/WhyHighPaidJobs";
+import CareerFreedom from "../components/CareerFreedom";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <DreamJob />
       <SuccessStories />
       <WhyChooseUs />
+      <CareerFreedom />
+      <Footer />
     </>
   );
 }

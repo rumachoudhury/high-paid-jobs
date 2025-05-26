@@ -48,6 +48,9 @@ module.exports = {
         border: "var(--border)",
         background: "var(--background)",
         foreground: "var(--foreground)",
+
+        primary: "hsl(var(--primary))",
+        "primary-foreground": "hsl(var(--primary-foreground))",
       },
     },
   },
