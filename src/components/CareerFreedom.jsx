@@ -181,6 +181,7 @@ const plans = [
     buttonBg: "bg-white dark:bg-[#303030]",
     buttonTextColor: "text-[#0836D0] dark:text-white",
     checkIconColor: "text-white dark:text-white",
+    textColor: "text-white",
     checkCircleBg: "bg-[#3F75FF] dark:bg-[#303030]",
     isPopular: true,
   },
@@ -223,7 +224,7 @@ export default function CareerFreedom() {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className={`relative flex flex-col justify-between rounded-lg p-8 shadow-md min-h-[550px] max-w-7xl ${plan.cardBg} text-gray-800 dark:text-gray-200`}
+            className={`relative flex flex-col justify-between rounded-lg p-8 shadow-md min-h-[550px] max-w-7xl ${plan.cardBg} ${plan.textColor}`}
           >
             {plan.isPopular && (
               <div className="absolute top-8 rounded-l-md right-0 bg-orange-400 dark:bg-orange-300 text-black dark:text-white text-xs font-bold px-3 py-2 shadow-lg">

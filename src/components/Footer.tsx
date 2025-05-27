@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
     <footer className="bg-[#0B0B2B] text-white py-10 px-6 dark:bg-[#0B0B2B] pl-8 pr-10 ">
       <div
         //   className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-25 items-start  "
-        className="flex flex-row justify-between items-center text-center  max-w-7xl mx-auto items-start"
+        className="flex flex-row justify-between items-center text-center  max-w-7xl mx-auto "
       >
         {/* Logo */}
         <div className="col-span-1">

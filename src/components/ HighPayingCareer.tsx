@@ -91,23 +91,14 @@ export default function HighPayingCareer() {
           </div>
 
           {/* Right Side - Tracks Card */}
-          <div className="max-w-md mx-auto bg-white dark:bg-gray-800 border border-blue-300 dark:border-blue-900 rounded-xl shadow-sm h-[700px] flex flex-col overflow-hidden">
+          <div className="max-w-md mx-auto bg-white dark:bg-[#303030] border border-blue-300 dark:border-blue-900 rounded-xl shadow-sm h-[700px] flex flex-col overflow-hidden">
             {/* Header: full width, no padding */}
             <div className="bg-[#0636CE] dark:bg-[#052466] w-full text-start py-3">
               <h3 className="text-white text-2xl font-bold m-0 ml-5">
                 Job Prep Tracks
               </h3>
             </div>
-            {/* <ul className="space-y-8 ml-4 mt-6">
-              {tracks.map((track) => (
-                <li key={track} className="flex items-start gap-2">
-                  <div className="mt-1 w-6 h-6 flex items-center justify-center rounded-full bg-[#DCFCE7] dark:bg-green-900 text-green-600 text-sm font-bold border border-blue-500">
-                    ✓
-                  </div>
-                  <span className="text-gray-800">{track}</span>
-                </li>
-              ))}
-            </ul> */}
+
             <ul className="space-y-8 ml-4 mt-6">
               {tracks.map((track) => (
                 <li key={track} className="flex items-start gap-2">
@@ -129,7 +120,7 @@ export default function HighPayingCareer() {
         <div className="flex items-center justify-center mt-4">
           <button className="flex items-center justify-center space-x-2 text-white p-2 px-4 bg-[#0836CF] rounded-full hover:bg-[#062abf] transition">
             <span>Book Free Consultation</span>
-            {/* <span className="text-lg text-white">{">"}</span> */}
+
             <ChevronRight className="w-5 h-5 " />
           </button>
         </div>
