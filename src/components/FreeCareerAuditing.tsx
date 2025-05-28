@@ -1,7 +1,13 @@
+"use client";
+
 import { ChevronRight } from "lucide-react";
 import React from "react";
+import CountdownTimer from "../app/freeCareer/pages";
 
-export default function FreeCareerAuditing() {
+function FreeCareerAuditing() {
+  //   const targetDate = new Date("2025-12-31T23:59:59").getTime();
+  const targetDate = new Date().getTime() + 10 * 24 * 60 * 60 * 1000; //it automatically always "10 days from now"
+
   return (
     <div className="bg-[#FFFFFF] dark:bg-[#202120] min-h-screen flex flex-col">
       {/* Top Section */}
@@ -9,7 +15,7 @@ export default function FreeCareerAuditing() {
         <h1 className="text-3xl font-bold mb-2 dark:text-white">
           Door Closes for FREE Career Auditing
         </h1>
-        <p className="text-lg dark:text-gray-300">Countdown Complete!</p>
+        <CountdownTimer targetDate={targetDate} />
       </section>
 
       {/* Mid Section */}
@@ -68,7 +74,24 @@ export default function FreeCareerAuditing() {
               id="datetime"
               className="w-full rounded border border-gray-300 px-3 py-2 dark:bg-[#444] dark:border-gray-600 dark:placeholder-gray-400"
             />
+            <p className="text-sm text-gray-500 mt-1">
+              Select your preferred date and time for the meeting.
+            </p>
           </div>
+          {/* <div>
+            <label htmlFor="datetime" className="block mb-1 font-medium">
+              What is the best time for a 15-minute career auditing session? *
+            </label>
+            <input
+              type="datetime"
+              id="datetime"
+              className="w-full rounded border border-gray-300 px-3 py-2 dark:bg-[#444] dark:border-gray-600 dark:placeholder-gray-400"
+              placeholder="Select date and time"
+            />
+            <p className="text-sm text-gray-500 mt-1">
+              Select your preferred date and time for the meeting.
+            </p>
+          </div> */}
 
           <div>
             <label className="block mb-1 font-medium">
@@ -161,7 +184,7 @@ export default function FreeCareerAuditing() {
               </button>
             </div>
             <div className="hidden md:block text-right font-semibold text-lg mt-10">
-              🚀 HighPaidJobs.us - The Fastest Path to a $100K+ Career!
+              HighPaidJobs.us - The Fastest Path to a $100K+ Career!
             </div>
           </div>
         </div>
@@ -169,3 +192,5 @@ export default function FreeCareerAuditing() {
     </div>
   );
 }
+
+export default FreeCareerAuditing;
