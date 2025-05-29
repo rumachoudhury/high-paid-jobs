@@ -4,7 +4,7 @@ import React from "react";
 function SecureFuture() {
   return (
     <section
-      className="relative left-0 right-0 bg-[#0836CF] dark:bg-[#052466] text-white py-16 mt-12 mb-12 mx-20 rounded-md shadow-lg"
+      className="relative left-0 right-0 bg-[#0836CF] dark:bg-[#052466] text-white py-16 mt-12 mb-12 mx-20 rounded-md shadow-lg animate-backgroundPulse"
       style={{
         backgroundImage: "url('/down-left.webp'), url('/down-right.webp')",
         backgroundPosition: "-120px , calc(100% + 120px)",

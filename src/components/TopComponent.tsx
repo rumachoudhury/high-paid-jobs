@@ -7,7 +7,25 @@ import Image from "next/image";
 
 export default function TopComponent() {
   return (
-    <div className="w-full bg-[#0836CF] dark:bg-[#052466] text-gray-200 dark:text-gray-300">
+    <div className="w-full md:min-h-[560px] bg-[#0836CF] dark:bg-[#052466] text-gray-200 dark:text-gray-300 relative overflow-hidden">
+      {/*Bottom-left background image */}
+      <Image
+        src="/bottom-left.webp"
+        alt="Bottom Left Decoration"
+        width={400}
+        height={400}
+        className="absolute bottom-0 left-0 z-10 rotate-180 pointer-events-none animate-pulse"
+      />
+
+      {/*Top-right background image */}
+      <Image
+        src="/top-right.webp"
+        alt="Top Right Decoration"
+        width={400}
+        height={400}
+        className="absolute top-0 right-0 z-10 pointer-events-none animate-pulse"
+      />
+
       {/* Top bar */}
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 border-b-2 border-gray-500">
         {/* Left side: Logo */}
@@ -46,7 +64,6 @@ export default function TopComponent() {
           </Button>
         </div>
       </div>
-
       {/* Bottom section */}
       <section className="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-12">
         {/* Left side: Text and buttons */}
@@ -58,14 +75,6 @@ export default function TopComponent() {
             🔥 99.99% GUARANTEED to Reach the Top 1%
           </h2>
 
-          {/* <h1 className="text-5xl font-bold text-white dark:text-gray-300 leading-relaxed">
-            Get your Six-Figure job back in{" "}
-            <span className="relative inline-block text-[#E8B006] font-semibold">
-              8-16 Weeks
-              <span className="absolute left-0 bottom-0 w-full h-[4px] bg-[#E8B006] rounded-b-full"></span>
-            </span>
-            with our proven techniques.
-          </h1> */}
           <h1 className="text-5xl font-bold text-white dark:text-gray-300 leading-relaxed">
             Get your Six-Figure job back in{" "}
             <span className="relative inline-block text-[#E8B006] font-bold">
