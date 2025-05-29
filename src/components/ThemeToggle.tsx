@@ -30,11 +30,6 @@ export function ThemeToggle() {
 
   return (
     <DropdownMenu>
-      {/* <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon">
-          {renderIcon()}
-        </Button>
-      </DropdownMenuTrigger> */}
       <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"

@@ -1,3 +1,5 @@
+//commented code is for showing submit page after the form is completed and the Submit button is clicked.
+
 // "use client";
 
 // import { Calendar } from "lucide-react";
@@ -204,13 +206,13 @@
 
 // export default FreeCareerForm;
 
-// *******************************************
+// ***************************************************************************************************
 
 "use client";
 
 import { Calendar, Check } from "lucide-react";
 import React, { useState, useEffect } from "react";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Confetti from "react-confetti";
@@ -226,7 +228,7 @@ function FreeCareerForm() {
   const [showConfetti, setShowConfetti] = useState(false); // NEW
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
-  //   const router = useRouter();
+  const router = useRouter();
 
   // Update confetti dimensions
   useEffect(() => {
@@ -460,7 +462,7 @@ function FreeCareerForm() {
         />
       )}
 
-      {/*Success Modal */}
+      {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-gray-400 dark:bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-[#FEFFFF] dark:bg-[#303030] text-center p-6 shadow-lg w-full max-w-md mx-auto rounded-lg relative">
@@ -478,8 +480,12 @@ function FreeCareerForm() {
               <br />
               career auditing session.
             </p>
+
             <button
-              onClick={handleCloseModal}
+              onClick={() => {
+                handleCloseModal(); // Close the modal
+                router.push("/"); // Navigate to home
+              }}
               className="bg-[#0636CE] text-white px-6 py-2 rounded hover:bg-blue-300 transition"
             >
               Go Back

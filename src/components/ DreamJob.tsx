@@ -8,7 +8,6 @@ import {
   FileText,
   UserCheck,
 } from "lucide-react";
-// import Image from "next/image";
 
 export default function DreamJob() {
   const [hoveredCard, setHoveredCard] = useState("");
@@ -69,13 +68,7 @@ export default function DreamJob() {
             }`}
           >
             <Briefcase className="w-8 h-8 text-blue-600" />
-            {/* <Image
-              src="/job-assessment.png"
-              alt="Job Assessment"
-              width={40}
-              height={40}
-              className="rounded-full"
-            /> */}
+
             <div>
               <h3 className="font-semibold text-lg">Job Assessment</h3>
             </div>
@@ -93,13 +86,7 @@ export default function DreamJob() {
             }`}
           >
             <UserCheck className="w-8 h-8 text-green-600" />
-            {/* <Image
-              src="/job-placement.icon.png"
-              alt="Job Assessment"
-              width={40}
-              height={40}
-              className="rounded-full"
-            /> */}
+
             <div>
               <h3 className="font-semibold text-lg">Job Placement</h3>
             </div>
@@ -117,13 +104,7 @@ export default function DreamJob() {
             }`}
           >
             <FileText className="w-8 h-8 text-purple-600" />
-            {/* <Image
-              src="/job-prep.png"
-              alt="Job Assessment"
-              width={40}
-              height={40}
-              className="rounded-full"
-            /> */}
+
             <div>
               <h3 className="font-semibold text-lg">Job Prep</h3>
             </div>
