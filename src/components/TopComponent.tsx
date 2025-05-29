@@ -4,7 +4,6 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-// import Head from "next/head";
 
 export default function TopComponent() {
   return (
@@ -25,13 +24,25 @@ export default function TopComponent() {
         {/* Right side: Theme toggle and Get Started button */}
         <div className="flex items-center space-x-4">
           <ThemeToggle />
-          <Button
-            onClick={() => alert("Get Started clicked!")}
+
+          {/* <Button
+            // onClick={() => alert("Get Started clicked!")}
+            // onClick={() => router.push("/free-career-form")}
             className="bg-white text-md text-gray-600 hover:bg-gray-100 flex items-center space-x-2 rounded-full p-1 px-4"
           >
             <span className="">Get Started</span>
 
             <ChevronRight className="w-5 h-5 " />
+          </Button> */}
+          <Button
+            onClick={() => {
+              const el = document.getElementById("free-career-form");
+              el?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="bg-white text-md text-gray-600 hover:bg-gray-100 flex items-center space-x-2 rounded-full p-1 px-4"
+          >
+            <span>Get Started</span>
+            <ChevronRight className="w-5 h-5" />
           </Button>
         </div>
       </div>
@@ -42,7 +53,7 @@ export default function TopComponent() {
         <div className="flex-1 text-left space-y-6">
           <h2
             className="text-sm font-extrabold text-gray-100 px-6 py-3 border-2 border-gray rounded-full inline-block
-             animate-pulse select-none cursor-default  bg-[#0836CF] text-gray-200"
+             animate-pulse select-none cursor-default  bg-[#0836CF] "
           >
             🔥 99.99% GUARANTEED to Reach the Top 1%
           </h2>

@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
+import { ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 
 const stories = [
@@ -80,7 +81,6 @@ export default function SuccessStories() {
           LIVE TESTIMONIAL
         </p>
       </div>
-
       {/* Mobile Swiper */}
       {isMobile ? (
         <div className="w-full max-w-md mx-auto">
@@ -191,9 +191,27 @@ export default function SuccessStories() {
         </div>
       )}
       {/* Button */}
-      <Button className=" flex text-center items-center justify-center space-x-2  p-2 px-6 bg-[#FACC14] rounded-full  transition mt-10 text-black   mx-auto">
+
+      <Button
+        onClick={() => {
+          const el = document.getElementById("free-career-form");
+          el?.scrollIntoView({ behavior: "smooth" });
+        }}
+        className=" flex text-center items-center justify-center space-x-2  p-2 px-6 bg-[#FACC14] rounded-full  transition mt-10 text-black mx-auto font-semibold hover:bg-yellow-500 "
+      >
         Book Free Consultation
+        <ChevronRight className="w-5 h-5" />
       </Button>
+
+      {/* Also we can use a tag */}
+      {/* <a
+        href="#free-career-form"
+        // className="flex text-center items-center justify-center space-x-2 p-2 px-6 bg-[#FACC14] rounded-full transition mt-10 text-black mx-auto"
+        className="inline-flex text-center items-center justify-center space-x-2 px-6 py-2 bg-[#FACC14] rounded-full transition mt-10 text-black font-semibold hover:bg-yellow-500 "
+      >
+        Book Free Consultation
+        <ChevronRight className="w-5 h-5" />
+      </a> */}
     </section>
   );
 }

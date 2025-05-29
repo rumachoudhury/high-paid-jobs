@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Accordion,
   AccordionContent,
@@ -104,7 +106,13 @@ export default function QuestionsAnswers() {
           Have more questions? Ask us during your FREE consultation!
         </p>
         <div className="flex items-center justify-center mt-4">
-          <Button className="flex items-center justify-center space-x-2 text-white p-2 px-4 bg-[#0836CF] rounded-full hover:bg-[#062abf] transition">
+          <Button
+            onClick={() => {
+              const el = document.getElementById("free-career-form");
+              el?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="flex items-center justify-center space-x-2 text-white p-2 px-4 bg-[#0836CF] rounded-full hover:bg-[#062abf] transition"
+          >
             <span>Book Free Consultation</span>
 
             <ChevronRight className="w-5 h-5 " />

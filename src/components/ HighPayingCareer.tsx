@@ -1,3 +1,5 @@
+"use client";
+
 import { ChevronRight } from "lucide-react";
 
 const steps = [
@@ -24,7 +26,7 @@ const steps = [
   {
     number: "05",
     title: "Renegotiation for Extra $10k",
-    desc: "We’ll help you renegotiate your final salary to get an extra $10k or more.",
+    desc: "We'll help you renegotiate your final salary to get an extra $10k or more.",
   },
   {
     number: "06",
@@ -118,7 +120,13 @@ export default function HighPayingCareer() {
           </div>
         </div>
         <div className="flex items-center justify-center mt-4">
-          <button className="flex items-center justify-center space-x-2 text-white p-2 px-4 bg-[#0836CF] rounded-full hover:bg-[#062abf] transition">
+          <button
+            onClick={() => {
+              const el = document.getElementById("free-career-form");
+              el?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="flex items-center justify-center space-x-2 text-white p-2 px-4 bg-[#0836CF] rounded-full hover:bg-[#062abf] transition"
+          >
             <span>Book Free Consultation</span>
 
             <ChevronRight className="w-5 h-5 " />

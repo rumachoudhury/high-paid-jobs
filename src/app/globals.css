@@ -27,6 +27,10 @@
   background-color: #ffffff !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   :root {
     --border: #e5e7eb;

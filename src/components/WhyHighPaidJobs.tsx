@@ -1,3 +1,4 @@
+"use client";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Briefcase,
@@ -83,7 +84,13 @@ export default function WhyHighPaidJobs() {
       </div>
 
       <div className="flex items-center justify-center mt-10">
-        <button className="flex items-center justify-center space-x-2 text-white p-2 px-4 bg-[#0836CF] dark:bg-[#2D4EFF] rounded-full hover:bg-[#062abf] dark:hover:bg-[#1c3dce] transition">
+        <button
+          onClick={() => {
+            const el = document.getElementById("free-career-form");
+            el?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="flex items-center justify-center space-x-2 text-white p-2 px-4 bg-[#0836CF] dark:bg-[#2D4EFF] rounded-full hover:bg-[#062abf] dark:hover:bg-[#1c3dce] transition"
+        >
           <span>Book Free Consultation</span>
           <ChevronRight className="w-5 h-5" />
         </button>
