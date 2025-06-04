@@ -76,15 +76,36 @@ export default function CareerFreedom() {
         Choose the assessment plan that works best for you with our flexible
         payment options
       </p>
-      <div className="max-w-7xl px-6 grid grid-cols-1 md:grid-cols-3 gap-6 ml-5">
+      <div
+        // className="max-w-7xl px-6 grid grid-cols-1 md:grid-cols-3 gap-6 ml-5"
+        className="  grid md:grid-cols-3 gap-6 container md:mx-auto"
+      >
         {plans.map((plan, index) => (
           <div
             key={index}
             className={`relative flex flex-col justify-between rounded-lg p-8 shadow-md min-h-[550px] max-w-7xl ${plan.cardBg} ${plan.textColor}`}
           >
             {plan.isPopular && (
-              <div className="absolute top-8 rounded-l-md right-0 bg-orange-400 dark:bg-orange-300 text-black dark:text-white text-xs font-bold px-3 py-2 shadow-lg">
-                Most Popular
+              // <div className="absolute top-8 rounded-l-md right-0 bg-orange-400 dark:bg-orange-300 text-black dark:text-white text-xs font-bold px-3 py-2 shadow-lg">
+              //   Most Popular
+
+              // </div>
+
+              <div class="absolute top-10 -right-2 z-10">
+                <div class="bg-[#F6A934] text-xs md:text-sm font-medium text-black px-3 py-1 rounded-t rounded-bl">
+                  Most Popular
+                </div>
+                <div class="absolute top-6 md:top-7 right-0">
+                  <svg
+                    width="7.903320"
+                    height="7.903320"
+                    viewBox="0 0 7.90332 7.90332"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 0L7.9 0L0 7.9L0 0Z" fill="#F6A934" />
+                  </svg>
+                </div>
               </div>
             )}
 
