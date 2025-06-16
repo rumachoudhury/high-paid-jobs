@@ -225,7 +225,7 @@ function FreeCareerForm() {
   const [employed, setEmployed] = useState("");
   const [jobSwitch, setJobSwitch] = useState("");
   const [showModal, setShowModal] = useState(false);
-  const [showConfetti, setShowConfetti] = useState(false); // NEW
+  const [showConfetti, setShowConfetti] = useState(false);
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
   const router = useRouter();
