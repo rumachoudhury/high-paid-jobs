@@ -152,7 +152,7 @@ function FreeCareerForm() {
                   const input = document.querySelector(
                     "input[placeholder='Select date and time']"
                   );
-                  input?.focus();
+                  (input as HTMLInputElement)?.focus();
                 }}
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white"
                 aria-label="Toggle calendar"
@@ -266,7 +266,7 @@ function FreeCareerForm() {
               You have submitted successfully!
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              We'll contact you soon to confirm your 15-minute
+              We&apos;ll contact you soon to confirm your 15-minute
               <br />
               career auditing session.
             </p>
