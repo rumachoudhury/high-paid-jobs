@@ -14,7 +14,7 @@ export default function QuestionsAnswers() {
     <section className=" w-full  mx-auto px-6 py-10 text-center bg-[#F4F5F5] dark:bg-[#202120]">
       <div className="mb-8">
         <h2 className="text-5xl font-bold mb-2">
-          Got Questions? We've Got Answers
+          Got Questions? We&#39;ve Got Answers
         </h2>
         <p
           //   className="text-muted-foreground mb-8"
@@ -44,7 +44,7 @@ export default function QuestionsAnswers() {
           value="item-2"
           className=" border-0 dark:border dark:border-gray-600 shadow-md px-4 bg-[#FFFFFF] dark:bg-[#020711] rounded-lg mb-4 py-1"
         >
-          <AccordionTrigger>What if I don't get hired?</AccordionTrigger>
+          <AccordionTrigger>What if I don&#39;t get hired?</AccordionTrigger>
           <AccordionContent>
             We offer ongoing support and resources until you secure employment.
             Our program includes career coaching and job placement assistance.

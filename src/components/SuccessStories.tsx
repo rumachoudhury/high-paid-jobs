@@ -122,7 +122,7 @@ export default function SuccessStories() {
                       {story.message}
                     </p>
 
-                    <div className="flex gap-1 mt-1 mt-4">
+                    <div className="flex gap-1 mt-1 ">
                       {[...Array(5)].map((_, i) => (
                         <Image
                           key={i}
@@ -173,7 +173,7 @@ export default function SuccessStories() {
                 {/* <p className="text-sm text-gray-500 mb-1">{story.company}</p> */}
                 <p className="text-lg text-white mb-1 mt-4">{story.message}</p>
 
-                <div className="flex gap-1 mt-1 mt-4">
+                <div className="flex gap-1 mt-1">
                   {[...Array(5)].map((_, i) => (
                     <Image
                       key={i}
@@ -203,7 +203,7 @@ export default function SuccessStories() {
         <ChevronRight className="w-5 h-5" />
       </Button>
 
-      {/* Also we can use a tag */}
+      {/* Also we can use <a> tag */}
       {/* <a
         href="#free-career-form"
         // className="flex text-center items-center justify-center space-x-2 p-2 px-6 bg-[#FACC14] rounded-full transition mt-10 text-black mx-auto"
